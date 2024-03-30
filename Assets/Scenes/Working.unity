@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 22626974}
   - component: {fileID: 22626973}
   m_Layer: 5
-  m_Name: Read Raw Value
+  m_Name: ReadRawValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1020,7 +1020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114023058375386772, guid: bb5e6aea88a650f4a8317e74940b0ea4, type: 3}
       propertyPath: ManagerState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114023058375386772, guid: bb5e6aea88a650f4a8317e74940b0ea4, type: 3}
       propertyPath: presentExtentionsMap.keys.Array.size
@@ -1056,6 +1056,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceRead: 0
+  forceToLength: 0
+  rawReadUI: {fileID: 22626973}
 --- !u!1 &1498886292
 GameObject:
   m_ObjectHideFlags: 0
