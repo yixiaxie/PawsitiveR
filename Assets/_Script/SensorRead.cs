@@ -9,6 +9,8 @@ public class SensorRead : MonoBehaviour
 {
     UduinoManager uduinoManager;
     public int forceRead;
+    public int forceToLength;
+    [SerializeField]private TextMeshProUGUI rawReadUI;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,8 @@ public class SensorRead : MonoBehaviour
     IEnumerator ReadValueTenTimesPerSec(){
         while(true){
             forceRead = uduinoManager.analogRead(AnalogPin.A0);
+            forceToLength = forceRead - 900; 
+            rawReadUI.text = forceRead.ToString();
             yield return new WaitForSeconds(0.1f);
         }
     }
